@@ -1,7 +1,5 @@
 # Stox Market
 
----
-
 ### Developing
 
 1. Run `npm install` to install dependencies.
