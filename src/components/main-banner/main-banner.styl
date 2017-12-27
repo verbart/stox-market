@@ -1,0 +1,36 @@
+.mainBanner
+  position relative
+  padding-top 3rem
+  padding-bottom 3rem
+  background url(/images/main-banner/main-banner.jpg) center / cover
+  &__caption
+    margin-top 0
+    margin-bottom 2rem
+    text-shadow 0 0.313rem 0.438rem rgba(0, 4, 2, 0.89)
+    color #fefefe
+    font-size 3rem
+    font-weight 700
+    line-height 3.438rem
+    text-transform uppercase
+  &__testimonials
+    max-width 23rem
+    .slick-list
+      background rgba(#060c16, .82)
+  &__backgrounds, &__backgrounds:after
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+  &__backgrounds
+    .slick
+      &-list, &-track, &-slide, &-slide > div
+        height 100%
+    &:after
+      content ''
+      background linear-gradient(-90deg, transparent 50%, #000), linear-gradient(90deg, transparent 50%, #000)
+      opacity .6
+  &__background
+    height 100%
+    background-position center
+    background-size cover
