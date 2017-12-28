@@ -8,7 +8,7 @@ $('.mainBanner__backgrounds').slick({
 });
 
 $('.mainBanner__testimonials').slick({
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 5000,
   asNavFor: '.mainBanner__backgrounds',
   infinite: true,

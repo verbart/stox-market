@@ -1,0 +1,37 @@
+.button
+  position relative
+  top 0
+  display inline-flex
+  align-items center
+  justify-content center
+  min-height 2rem
+  height 3.438rem
+  padding .5rem 1rem
+  border 0
+  border-radius 4px
+  box-shadow 0 0.125rem 0 #b7600d, inset 0 0 0 rgba(184, 191, 142, 0.34)
+  background-color #fda118
+  background-image linear-gradient(to top, rgba(0, 4, 2, 0.38) 0%, rgba(255, 255, 255, 0.38) 100%)
+  text-shadow 0 0 0 rgba(184, 191, 142, 0.25)
+  color #031e3d
+  font-size 1.438rem
+  font-weight 700
+  line-height 1.5rem
+  text-transform uppercase
+  text-align center
+  cursor pointer
+  text-decoration none
+  transition .2s
+  &:hover
+    opacity .9
+  &:after
+    content ''
+    position absolute
+    top @border-radius
+    right 0
+    width 2.25rem
+    height @width
+    transform translate(50%, -50%)
+    background url(/images/star.png) center / cover
+  &_block
+    width 100%

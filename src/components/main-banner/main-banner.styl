@@ -1,8 +1,26 @@
 .mainBanner
   position relative
   padding-top 3rem
-  padding-bottom 3rem
+  padding-bottom 2rem
   background url(/images/main-banner/main-banner.jpg) center / cover
+  &__backgrounds, &__backgrounds:after
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+  &__backgrounds
+    .slick
+      &-list, &-track, &-slide, &-slide > div
+        height 100%
+    &:after
+      content ''
+      background linear-gradient(-90deg, transparent 35%, #000), linear-gradient(90deg, transparent 35%, #000)
+      opacity .8
+  &__background
+    height 100%
+    background-position center
+    background-size cover
   &__caption
     margin-top 0
     margin-bottom 2rem
@@ -16,21 +34,5 @@
     max-width 23rem
     .slick-list
       background rgba(#060c16, .82)
-  &__backgrounds, &__backgrounds:after
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    right 0
-  &__backgrounds
-    .slick
-      &-list, &-track, &-slide, &-slide > div
-        height 100%
-    &:after
-      content ''
-      background linear-gradient(-90deg, transparent 50%, #000), linear-gradient(90deg, transparent 50%, #000)
-      opacity .6
-  &__background
-    height 100%
-    background-position center
-    background-size cover
+  &__form
+    margin-top 3rem

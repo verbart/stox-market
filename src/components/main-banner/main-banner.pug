@@ -6,14 +6,17 @@ section.mainBanner
     .mainBanner__background(style='background-image: url(/images/main-banner/banner-4.png);')
 
   .container
-    h1.mainBanner__caption What do people
-      br
-      | think of
-      br
-      | StoxMarket?
+    .row
+      .col-md-6
+        h1.mainBanner__caption What do people
+          br
+          | think of
+          br
+          | StoxMarket?
 
-    .mainBanner__testimonials
-      include ../testimonial/testimonial
+        .mainBanner__testimonials
+          include ../testimonial/testimonial
 
-    .mainBanner__form
-
+      .col-md-5.offset-md-1
+        .mainBanner__form
+          include ../main-form/main-form

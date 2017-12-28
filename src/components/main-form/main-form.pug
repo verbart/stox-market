@@ -1,0 +1,26 @@
+include ../checkbox/checkbox
+
+
+.mainForm
+  h2.mainForm__caption Hard to believe?
+    br
+    | Try us!
+
+  form.form.mainForm__form
+    .form__group.margin_bottom_half
+      input.form__input(name='first_name' placeholder='First name')
+    .form__group.margin_bottom_half
+      input.form__input(name='last_name' placeholder='Last name')
+    .form__group.margin_bottom_half
+      input.form__input(type='email' name='email' placeholder='E-mail')
+    .form__group.margin_bottom_half
+      input.form__input(name='phone' placeholder='Phone')
+    .form__group.margin_bottom_half
+      input.form__input(name='country' placeholder='Country')
+
+    .margin_bottom
+      +checkbox(name='agreement') I am over 18 years of age and I accept
+        = ' '
+        a(href='javascript:void(0)') these Legal Terms & Conditions
+
+    button.button.button_block Give StoxMarket a try
