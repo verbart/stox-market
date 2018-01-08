@@ -1,0 +1,20 @@
+[
+  {
+    "preview": "/images/note.png",
+    "caption": "Register <br/> and make a deposit",
+    "description": "Create your trading account and select a convenient depositing method. It is as easy as sending an email.",
+    "type": "orange"
+  },
+  {
+    "preview": "/images/monitor.png",
+    "caption": "Learn and get demo <br/> trading",
+    "description": "Know how Forex and binary option trading work. Create a demo account to test your skills in live trading conditions.",
+    "type": "blue"
+  },
+  {
+    "preview": "/images/money-house.png",
+    "caption": "Trade safely",
+    "description": "Choose trade assets and platform. Develop your strategy and experience instant profit margins increase!",
+    "type": "green"
+  }
+]

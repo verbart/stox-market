@@ -15,3 +15,4 @@ $('.mainBanner__testimonials').slick({
   arrows: false,
   dots: true
 });
+console.log('mainBanner');

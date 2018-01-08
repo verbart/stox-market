@@ -1,0 +1,23 @@
+.thumbnail
+  text-align center
+  &__preview
+    position relative
+    max-width 12rem
+    margin 0 auto 1rem
+    box-shadow -0.3rem -0.187rem 0 rgba(53, 53, 53, 0.96)
+    border 0.063rem solid #000402
+    border-radius 50%
+    @media(max-width 1200px)
+      width 56%
+    &:before
+      content ''
+      display block
+      padding-bottom 100%
+  &__caption
+    margin-bottom 1.25rem
+    font-size 1.313rem
+    font-weight 500
+    line-height 1.5rem
+    text-transform uppercase
+  &__description
+    margin 0

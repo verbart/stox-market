@@ -1,0 +1,10 @@
+mixin intro-step(data)
+  - data = data || {};
+
+  .col-md-6.col-lg-4.introStep(class!=attributes.class)
+    article.thumbnail.introStep__item
+      .thumbnail__preview.introStep__preview
+        img(src=data.preview)
+        .introStep__number= data.number
+      .thumbnail__caption.introStep__caption!= data.caption
+      p.thumbnail__description= data.description

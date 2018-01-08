@@ -1,0 +1,23 @@
+include ./intro-step
+
+
+section.introSteps
+  .container
+    header.sectionHeader
+      h2.sectionHeader__caption Start trading in
+        = ' '
+        span.introSteps__headerHighliter 3
+        = ' '
+        | simple steps:
+
+    .row.justify-content-center
+      -
+        const steps = require('./src/components/sections/intro-steps/intro-steps.json');
+
+      for step, index in steps
+        +intro-step({
+          preview: step.preview,
+          number: index+1,
+          caption: step.caption,
+          description: step.description
+        })(class='introStep_'+step.type)
