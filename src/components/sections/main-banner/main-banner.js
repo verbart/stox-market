@@ -8,8 +8,8 @@ $('.mainBanner__backgrounds').slick({
 });
 
 $('.mainBanner__testimonials').slick({
-  // autoplay: true,
-  autoplaySpeed: 5000,
+  autoplay: true,
+  autoplaySpeed: 6000,
   asNavFor: '.mainBanner__backgrounds',
   infinite: true,
   arrows: false,
