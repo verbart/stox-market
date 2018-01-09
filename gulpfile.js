@@ -20,7 +20,6 @@ const webpack = require('webpack');
 const bro = require('gulp-bro');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
-const distPath = isDevelopment ? './public' : './dist';
 
 gulp.task('views', function () {
   return gulp.src('./src/index.pug')
@@ -34,7 +33,7 @@ gulp.task('views', function () {
       gutil.log(gutil.colors.red('Error: ' + error.message));
       this.emit('end');
     })
-    .pipe(gulp.dest(distPath));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('styles', function () {
@@ -55,7 +54,7 @@ gulp.task('styles', function () {
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(gulpIf(!isDevelopment, cleanCSS()))
     .pipe(rename('style.css'))
-    .pipe(gulp.dest(distPath + '/css'))
+    .pipe(gulp.dest('./public/css'))
 });
 
 gulp.task('scripts', function () {
@@ -68,25 +67,25 @@ gulp.task('scripts', function () {
     }))
     .pipe(gulpIf(!isDevelopment, uglify()))
     .pipe(rename('bundle.js'))
-    .pipe(gulp.dest(distPath + '/js'));
+    .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('images', function () {
   return gulp.src('./src/assets/images/**/*.*')
     .pipe(gulpIf(!isDevelopment, tinypng()))
-    .pipe(gulp.dest(distPath + '/images'));
+    .pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('fonts', function () {
   return gulp.src([
       './src/assets/fonts/**/*.*'
   ])
-    .pipe(gulp.dest(distPath + '/fonts'));
+    .pipe(gulp.dest('./public' + '/fonts'));
 });
 
 gulp.task('misc', function () {
   return gulp.src('./src/assets/misc/**/*.*')
-    .pipe(gulp.dest(distPath));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('watch', function () {
@@ -98,15 +97,15 @@ gulp.task('watch', function () {
 
 gulp.task('serve', function () {
   browserSync.init({
-    server: distPath,
+    server: './public',
     port: 8080
   });
 
-  browserSync.watch(distPath + '/**/*.*').on('change', browserSync.reload);
+  browserSync.watch('./public/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('clean', function () {
-  return del(distPath)
+  return del('./public')
 });
 
 gulp.task('build', gulp.series(
